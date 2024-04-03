@@ -50,7 +50,7 @@ async def chatbotofd(client, message):
         vick.insert_one({"chat_id": message.chat.id})
         await message.reply_text(f"Chatbot Disabled!")
     if is_vick:
-        await message.reply_text(f"™°‌ 🫧 🇴 🇽 𝐘 𝐆 𝐄 𝐍 ChatBot Is Already Disabled")
+        await message.reply_text(f"™°‌ Naruto ChatBot Is Already Disabled")
     
 
 @bot.on_message(
@@ -70,14 +70,14 @@ async def chatboton(client, message):
             )
     is_vick = vick.find_one({"chat_id": message.chat.id})
     if not is_vick:           
-        await message.reply_text(f" ™°‌ 🫧 🇴 🇽 𝐘 𝐆 𝐄 𝐍 Is Already Enabled")
+        await message.reply_text(f" ™°‌ Naruto Is Already Enabled")
     if is_vick:
         vick.delete_one({"chat_id": message.chat.id})
         await message.reply_text(f"ChatBot Is Enable!")
     
 
 @bot.on_message(
-    filters.command("chatbot", prefixes=["/", ".", "?", "-"])
+    filters.command("chatbot", prefixes=["/", ".", "?", "-" "•" ":"])
     & ~filters.private)
 async def chatbot(client, message):
     await message.reply_text(f"**Usage:**\n/chatbot [on|off] only group")
