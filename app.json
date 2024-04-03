@@ -17,11 +17,11 @@
         },
         "API_HASH": {
             "description": "telegram api hash here",
-            "required": true
+           required": true
         }
     },
     "addons": [
-        {
+        {  "version": "15"
             "plan": "heroku-postgresql"
         }
     ]
